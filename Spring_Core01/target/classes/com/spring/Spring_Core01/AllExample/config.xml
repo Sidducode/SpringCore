@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="developers"
+		class="com.spring.Spring_Core01.AllExample.Developers">
+		<property name="java">
+			<value>10</value>
+		</property>
+		<property name="devops">
+			<value>5</value>
+		</property>
+		<property name="sql">
+			<value>50</value>
+		</property>
+	</bean>
+
+	<bean name="company"
+		class="com.spring.Spring_Core01.AllExample.Company">
+		<property name="id">
+			<value>1</value>
+		</property>
+		<property name="name">
+			<value>CG</value>
+		</property>
+
+		<property name="project">
+			<list>
+				<value>Telecom</value>
+				<value>Travel</value>
+				<value>E-Comers</value>
+				<value>HealthCare</value>
+			</list>
+		</property>
+
+		<property name="department">
+			<set>
+				<value>fullstack-developer</value>
+				<value>front-end</value>
+				<value>back-end</value>
+				<value>database-devep</value>
+			</set>
+		</property>
+
+		<property name="branches">
+			<map>
+				<entry key="1">
+					<value>bang</value>
+				</entry>
+				<entry key="2" value="hyd" />
+				<entry key="3" value="channei" />
+			</map>
+		</property>
+
+		<property name="place">
+			<props>
+				<prop key="one">INDIA</prop>
+				<prop key="two">Pakistan</prop>
+				<prop key="three">USA</prop>
+				<prop key="four">USA</prop>
+			</props>
+		</property>
+
+		<property name="developers">
+			<ref bean="developers" />
+		</property>
+
+	</bean>
+
+</beans>
