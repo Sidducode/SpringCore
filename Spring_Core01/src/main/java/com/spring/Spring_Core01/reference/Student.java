@@ -11,6 +11,11 @@ public class Student {
 	public void setSubje(Scores subje) {
 		this.subje = subje;
 	}
+
+	@Override
+	public String toString() {
+		return "Student [subje=" + subje + "]";
+	}
 	
 	
 

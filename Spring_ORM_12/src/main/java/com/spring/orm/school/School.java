@@ -6,18 +6,23 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
+
 @Table(name="Student002")
 public class School {
 
 	@Id
 	@Column(name="ID")
 	private int id;
+	
 	@Column(name="NAME")
 	private String name;
+	
 	@Column(name="PLACE")
 	private String place ;
+	
 	@Column(name="STRENGTH")
 	private int strength;
+	
 	
 	
 	public int getId() {

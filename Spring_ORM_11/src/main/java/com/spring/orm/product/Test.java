@@ -17,21 +17,21 @@ public class Test {
 		
 		ProductDao bean = (ProductDao) context.getBean("productdao");
 		
-		Product prd=new Product();
+		Product prd =new Product();
 		
 		prd.setId(5);
 		prd.setName("rtr");
 		prd.setDesc("d tg");
 		prd.setPrice(9797);
 		
-		//int product = bean.createProduct(prd);
-		//System.out.println(product);
+		int product = bean.createProduct(prd);
+		System.out.println(product);
 		
-		//bean.updateProduct(prd);
+		bean.updateProduct(prd);
 		
-		//bean.deleteProduct(prd);
+		bean.deleteProduct(prd);
 		
-		//Product findProduct = bean.findProduct(3);
+		Product findProduct = bean.findProduct(3);
 		//System.out.println(findProduct);
 		
 		List<Product> allProduct = bean.findAllProduct();

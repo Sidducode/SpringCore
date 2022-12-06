@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+<context:annotation-config/>
+	
+	<bean name="student" class="com.spring.springall.Student">
+	   <property name="no" value="1"/>
+	   <property name="stdName" value="Sidd"/>
+	   <property name="stdPlace">
+	      <list>
+	         <value>bang</value>
+	        <value>mumb</value>
+	        <value>kol</value>
+	        <value>del</value>
+	      </list>
+	   </property>
+	   <property name="rollNo">
+	    <set>
+	       <value>10002</value>
+	       <value>10012</value>
+	       <value>20012</value>
+	       <value>30012</value>
+	       <value>40012</value>
+	    </set>
+	   </property>
+	</bean>
+	
+	<bean name="employee" class="com.spring.springall.Employee">
+	   <property name="totalEmp">
+	     <value>100</value>
+	   </property>
+	 <property name="subjects"> 
+	    <map>
+	       <entry key="1" value="Telugu"/>
+	       <entry key="2" value="Eng"/>
+	       <entry key="3" value="Hindi"/>
+	       <entry key="4" value="Maths"/>
+	    </map>
+	 </property>
+	 <property name="headofDepar">
+	   <props>
+	     <prop key="1">principal</prop>
+	     <prop key="2">HM</prop>
+	     <prop key="3">PET</prop>
+	   </props>
+	 </property>
+	</bean>
+	
+	<bean name ="school" class="com.spring.springall.School" p:id="001" p:name="DON"/>
+	
+</beans>

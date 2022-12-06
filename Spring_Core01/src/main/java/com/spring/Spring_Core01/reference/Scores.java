@@ -6,6 +6,7 @@ public class Scores {
 	private String english;
 	private String maths;
 	private String gk;
+	
 	public String getTelugu() {
 		return telugu;
 	}
@@ -30,6 +31,11 @@ public class Scores {
 	public void setGk(String gk) {
 		this.gk = gk;
 	}
+	@Override
+	public String toString() {
+		return "Scores [telugu=" + telugu + ", english=" + english + ", maths=" + maths + ", gk=" + gk + "]";
+	}
+	
 	
 	
 }
